@@ -1,0 +1,7 @@
+C:\Users\vandu\School_Management\School_Management\School_Management\bin\Debug\School_Management.exe.config
+C:\Users\vandu\School_Management\School_Management\School_Management\bin\Debug\School_Management.exe
+C:\Users\vandu\School_Management\School_Management\School_Management\bin\Debug\School_Management.pdb
+C:\Users\vandu\School_Management\School_Management\School_Management\obj\Debug\School_Management.csproj.AssemblyReference.cache
+C:\Users\vandu\School_Management\School_Management\School_Management\obj\Debug\School_Management.csproj.CoreCompileInputs.cache
+C:\Users\vandu\School_Management\School_Management\School_Management\obj\Debug\School_Management.exe
+C:\Users\vandu\School_Management\School_Management\School_Management\obj\Debug\School_Management.pdb
