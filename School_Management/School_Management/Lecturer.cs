@@ -10,8 +10,8 @@ namespace School_Management
     {
         public string lecDept { get; set; }
 
-        public Lecturer(string id, string name, string dob, string email, string address, string dept)
-            : base(id, name, dob, email, address)
+        public Lecturer(string id, string name, string dateofbirth, string email, string address, string dept)
+            : base(id, name, dateofbirth, email, address)
         {
             lecDept = dept;
         }

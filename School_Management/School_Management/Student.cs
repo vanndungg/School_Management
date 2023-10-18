@@ -11,8 +11,8 @@ namespace School_Management
 
         public string stdClass { get; set; }
 
-        public Student(string id, string name, string dob, string email, string address, string _class)
-            : base(id, name, dob, email, address)
+        public Student(string id, string name, string dateofbirth, string email, string address, string _class)
+            : base(id, name, dateofbirth, email, address)
         {
             stdClass = _class;
         }
