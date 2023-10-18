@@ -8,12 +8,12 @@ namespace School_Management
 {
     internal class Lecturer : Person
     {
-        public string lecDept { get; set; }
+        public string Department { get; set; }
 
-        public Lecturer(string id, string name, string dateofbirth, string email, string address, string dept)
-            : base(id, name, dateofbirth, email, address)
+        public Lecturer(string id, string name, string dateOfBirth, string email, string address, string department)
+            : base(id, name, dateOfBirth, email, address)
         {
-            lecDept = dept;
+            Department = department;
         }
     }
 }

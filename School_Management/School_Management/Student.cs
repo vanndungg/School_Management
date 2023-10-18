@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace School_Management
 {
-    internal class Student : Person
+    internal class Student : Person //Inheritance ;Student va Lecturer: Polymorphism
     {
-
         public string stdClass { get; set; }
 
-        public Student(string id, string name, string dateofbirth, string email, string address, string _class)
-            : base(id, name, dateofbirth, email, address)
+        public Student(string id, string name, string dateOfBirth, string email, string address, string studentClass)
+            : base(id, name, dateOfBirth, email, address)
         {
-            stdClass = _class;
+            stdClass = studentClass;
         }
     }
 }

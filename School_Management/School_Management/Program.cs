@@ -53,7 +53,7 @@ namespace School_Management
                 Console.WriteLine("3. Search students");
                 Console.WriteLine("4. Delete student");
                 Console.WriteLine("5. Update student");
-                Console.WriteLine("6. Back to main menu");
+                Console.WriteLine("6. Back to the main menu");
                 Console.WriteLine("===========================================================");
                 Console.WriteLine("Please choose:");
 
@@ -65,7 +65,7 @@ namespace School_Management
                         AddStudent();
                         break;
                     case 2:
-                        ViewStudents();
+                        DisplayInfo.DisplayStudents(students);
                         break;
                     case 3:
                         SearchStudents();
@@ -92,7 +92,7 @@ namespace School_Management
             Console.WriteLine("Enter student name: ");
             string Name = Console.ReadLine();
             Console.WriteLine("Enter student date of birth: ");
-            string DateofBirth = Console.ReadLine();
+            string DateOfBirth = Console.ReadLine();
             Console.WriteLine("Enter student email: ");
             string Email = Console.ReadLine();
             Console.WriteLine("Enter student address: ");
@@ -100,18 +100,9 @@ namespace School_Management
             Console.WriteLine("Enter student class: ");
             string stdClass = Console.ReadLine();
 
-            Student student = new Student(Id, Name, DateofBirth, Email, Address, stdClass);
+            Student student = new Student(Id, Name, DateOfBirth, Email, Address, stdClass);
             students.Add(student);
             Console.WriteLine("Student added successfully.");
-        }
-
-        static void ViewStudents()
-        {
-            Console.WriteLine("List of Students:");
-            foreach (var student in students)
-            {
-                Console.WriteLine($"{student.Id} | {student.Name} | {student.DateofBirth} | {student.Email} | {student.Address} | {student.stdClass}");
-            }
         }
 
         static void SearchStudents()
@@ -124,7 +115,7 @@ namespace School_Management
             if (foundStudent != null)
             {
                 Console.WriteLine("Search Results:");
-                Console.WriteLine($"{foundStudent.Id} | {foundStudent.Name} | {foundStudent.DateofBirth} | {foundStudent.Email} | {foundStudent.Address} | {foundStudent.stdClass}");
+                Console.WriteLine($"{foundStudent.Id} | {foundStudent.Name} | {foundStudent.DateOfBirth} | {foundStudent.Email} | {foundStudent.Address} | {foundStudent.stdClass}");
             }
             else
             {
@@ -157,13 +148,15 @@ namespace School_Management
 
             if (studentToUpdate != null)
             {
+                Console.WriteLine("===========================================================");
                 Console.WriteLine("Current student data:");
                 Console.WriteLine($"Student ID: {studentToUpdate.Id}");
                 Console.WriteLine($"Name: {studentToUpdate.Name}");
-                Console.WriteLine($"Date of Birth: {studentToUpdate.DateofBirth}");
+                Console.WriteLine($"Date of Birth: {studentToUpdate.DateOfBirth}");
                 Console.WriteLine($"Email: {studentToUpdate.Email}");
                 Console.WriteLine($"Address: {studentToUpdate.Address}");
                 Console.WriteLine($"Class: {studentToUpdate.stdClass}");
+                Console.WriteLine("===========================================================");
 
                 Console.WriteLine("Enter new data (or press Enter to keep current data):");
                 Console.WriteLine("Enter student name: ");
@@ -172,9 +165,9 @@ namespace School_Management
                     studentToUpdate.Name = Name;
 
                 Console.WriteLine("Enter student date of birth: ");
-                string DateofBirth = Console.ReadLine();
-                if (!string.IsNullOrWhiteSpace(DateofBirth))
-                    studentToUpdate.DateofBirth = DateofBirth;
+                string DateOfBirth = Console.ReadLine();
+                if (!string.IsNullOrWhiteSpace(DateOfBirth))
+                    studentToUpdate.DateOfBirth = DateOfBirth;
 
                 Console.WriteLine("Enter student email: ");
                 string Email = Console.ReadLine();
@@ -210,7 +203,7 @@ namespace School_Management
                 Console.WriteLine("3. Search lecturers");
                 Console.WriteLine("4. Delete lecturer");
                 Console.WriteLine("5. Update lecturer");
-                Console.WriteLine("6. Back to main menu");
+                Console.WriteLine("6. Back to the main menu");
                 Console.WriteLine("===========================================================");
                 Console.WriteLine("Please choose:");
 
@@ -222,7 +215,7 @@ namespace School_Management
                         AddLecturer();
                         break;
                     case 2:
-                        ViewLecturers();
+                        DisplayInfo.DisplayLecturers(lecturers);
                         break;
                     case 3:
                         SearchLecturers();
@@ -249,7 +242,7 @@ namespace School_Management
             Console.WriteLine("Enter lecturer name: ");
             string Name = Console.ReadLine();
             Console.WriteLine("Enter lecturer date of birth: ");
-            string DateofBirth = Console.ReadLine();
+            string DateOfBirth = Console.ReadLine();
             Console.WriteLine("Enter lecturer email: ");
             string Email = Console.ReadLine();
             Console.WriteLine("Enter lecturer address: ");
@@ -257,18 +250,9 @@ namespace School_Management
             Console.WriteLine("Enter lecturer department: ");
             string lecDept = Console.ReadLine();
 
-            Lecturer lecturer = new Lecturer(Id, Name, DateofBirth, Email, Address, lecDept);
+            Lecturer lecturer = new Lecturer(Id, Name, DateOfBirth, Email, Address, lecDept);
             lecturers.Add(lecturer);
             Console.WriteLine("Lecturer added successfully.");
-        }
-
-        static void ViewLecturers()
-        {
-            Console.WriteLine("List of Lecturers:");
-            foreach (var lecturer in lecturers)
-            {
-                Console.WriteLine($"{lecturer.Id} | {lecturer.Name} | {lecturer.DateofBirth} | {lecturer.Email} | {lecturer.Address} | {lecturer.lecDept}");
-            }
         }
 
         static void SearchLecturers()
@@ -281,7 +265,7 @@ namespace School_Management
             if (foundLecturer != null)
             {
                 Console.WriteLine("Search Results:");
-                Console.WriteLine($"{foundLecturer.Id} | {foundLecturer.Name} | {foundLecturer.DateofBirth} | {foundLecturer.Email} | {foundLecturer.Address} | {foundLecturer.lecDept}");
+                Console.WriteLine($"{foundLecturer.Id} | {foundLecturer.Name} | {foundLecturer.DateOfBirth} | {foundLecturer.Email} | {foundLecturer.Address} | {foundLecturer.Department}");
             }
             else
             {
@@ -314,13 +298,15 @@ namespace School_Management
 
             if (lecturerToUpdate != null)
             {
+                Console.WriteLine("===========================================================");
                 Console.WriteLine("Current lecturer data:");
                 Console.WriteLine($"Lecturer ID: {lecturerToUpdate.Id}");
                 Console.WriteLine($"Name: {lecturerToUpdate.Name}");
-                Console.WriteLine($"Date of Birth: {lecturerToUpdate.DateofBirth}");
+                Console.WriteLine($"Date of Birth: {lecturerToUpdate.DateOfBirth}");
                 Console.WriteLine($"Email: {lecturerToUpdate.Email}");
                 Console.WriteLine($"Address: {lecturerToUpdate.Address}");
-                Console.WriteLine($"Department: {lecturerToUpdate.lecDept}");
+                Console.WriteLine($"Department: {lecturerToUpdate.Department}");
+                Console.WriteLine("===========================================================");
 
                 Console.WriteLine("Enter new data (or press Enter to keep current data):");
                 Console.WriteLine("Enter lecturer name: ");
@@ -329,9 +315,9 @@ namespace School_Management
                     lecturerToUpdate.Name = Name;
 
                 Console.WriteLine("Enter lecturer date of birth: ");
-                string DateofBirth = Console.ReadLine();
-                if (!string.IsNullOrWhiteSpace(DateofBirth))
-                    lecturerToUpdate.DateofBirth = DateofBirth;
+                string DateOfBirth = Console.ReadLine();
+                if (!string.IsNullOrWhiteSpace(DateOfBirth))
+                    lecturerToUpdate.DateOfBirth = DateOfBirth;
 
                 Console.WriteLine("Enter lecturer email: ");
                 string Email = Console.ReadLine();
@@ -346,7 +332,7 @@ namespace School_Management
                 Console.WriteLine("Enter lecturer department: ");
                 string lecDept = Console.ReadLine();
                 if (!string.IsNullOrWhiteSpace(lecDept))
-                    lecturerToUpdate.lecDept = lecDept;
+                    lecturerToUpdate.Department = lecDept;
 
                 Console.WriteLine("Lecturer updated successfully.");
             }

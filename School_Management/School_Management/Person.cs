@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace School_Management
 {
-    internal class Person
+    internal abstract class Person //Abstraction
     {
-        private string id;
+        private string id; //Encapsulation
         public string Id { get { return id; } set { id = value; } }
         public string Name { get; set; }
-        public string DateofBirth { get; set; }
+        public string DateOfBirth { get; set; }
         public string Email { get; set; }
         public string Address { get; set; }
 
-        public Person(string id, string name, string dateofbirth, string email, string address)
+        public Person(string id, string name, string dateOfBirth, string email, string address)
         {
             Id = id;
             Name = name;
-            DateofBirth = dateofbirth;
+            DateOfBirth = dateOfBirth;
             Email = email;
             Address = address;
         }
