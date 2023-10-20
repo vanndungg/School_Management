@@ -65,7 +65,7 @@ namespace School_Management
                         AddStudent();
                         break;
                     case 2:
-                        DisplayInfo.DisplayStudents(students);
+                        View.DisplayStudents(students);
                         break;
                     case 3:
                         SearchStudents();
@@ -215,7 +215,7 @@ namespace School_Management
                         AddLecturer();
                         break;
                     case 2:
-                        DisplayInfo.DisplayLecturers(lecturers);
+                        View.DisplayLecturers(lecturers);
                         break;
                     case 3:
                         SearchLecturers();

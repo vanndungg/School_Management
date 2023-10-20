@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace School_Management
 {
-    internal class DisplayInfo
+    internal class View
     {
         public static void DisplayStudents(List<Student> students)
         {
