@@ -16,7 +16,6 @@ namespace School_Management
             while (true)
             {
                 Console.WriteLine("===========================================================");
-                Console.WriteLine("Please choose:");
                 Console.WriteLine("1. Manage Students");
                 Console.WriteLine("2. Manage Lecturers");
                 Console.WriteLine("3. Exit");
